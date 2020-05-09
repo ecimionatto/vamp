@@ -1,4 +1,4 @@
-#VAMP
+# VAMP
 
 >To vamp is to compose or perform the accompaniment to a solo voice or instrument. In 20th century music, the term " vamp till ready" is sometimes seen, indicating that the accompanist is to repeat a simple one or two measure passage until the soloist is prepared to enter. Guitarists might understand this as being analogous to a guitar riff, however this is an entire passage of music that is repeated by all accompanying performers.
 
