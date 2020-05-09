@@ -5,7 +5,7 @@
 ## About
 Helping developers to avoid merging conflicts.
 
-- created using [create-react-app] (https://facebook.github.io/create-react-app)
+- created using [create-react-app](https://facebook.github.io/create-react-app)
 
 ## Available Scripts
 
