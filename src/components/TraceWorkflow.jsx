@@ -1,21 +1,23 @@
-import React from "react";
-import { render } from "react-dom";
 import { Chart } from "react-google-charts";
+import React from "react";
+import moment from "moment";
 
-const TreceWorkflow = (props) => {
-  
-  console.log("props: " + props)
-
-  const data = [
+const TreceWorkflow = (args) => {
+  let data = [
     [
-      { type: "string", id: "President" },
-      { type: "date", id: "Start" },
-      { type: "date", id: "End" },
+      { type: "string", id: "Trace" },
+      { type: "datetime", id: "Start" },
+      { type: "datetime", id: "End" },
     ],
-    ["Washington", new Date(1789, 3, 30), new Date(1797, 2, 4)],
-    ["Adams", new Date(1797, 2, 4), new Date(1801, 2, 4)],
-    ["Jefferson", new Date(1801, 2, 4), new Date(1809, 2, 4)],
   ];
+
+  args["props"].map((p) =>
+    data.push([
+      p.id,
+      new Date(p.start),
+      moment(p.start).add(p.exec_time * 1000, "ms"),
+    ])
+  );
 
   return (
     <div className={"my-pretty-chart-container"}>

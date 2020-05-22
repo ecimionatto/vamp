@@ -8,7 +8,7 @@ function App() {
     <div className="container">
       {/* New - use BrowserRouter to provide access to /profile */}
       <BrowserRouter>
-        <h1 className="text-center">Vamp</h1>
+        <h1 className="jumbotron text-center">Tracer Workflow Sequence</h1>
         <NavBar />
       </BrowserRouter>
     </div>

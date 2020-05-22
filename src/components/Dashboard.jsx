@@ -9,9 +9,9 @@ const Dashboard = () => {
   useEffect(() => {
     client.onopen = () => {
       console.log("WebSocket Client Connected");
-      setInterval(function () {
-        client.send("keep-alive");
-      }, 20000);
+      //      setInterval(function () {
+      //        client.send("keep-alive");
+      //      }, 20000);
     };
     client.onmessage = (message) => {
       try {
@@ -55,15 +55,13 @@ const Dashboard = () => {
     <form>
       <div className="container">
         <h1>Traces</h1>
-        <TraceWorkflow props={traces}/>
+        <TraceWorkflow props={traces} />
         <div className="card-header">
           {traces.map((t) => (
             <div className="card" key={t.id}>
               <div className="card-body">
                 <p className="card-title">id: {t.id}</p>
-                <p className="card-text">start:{t.start}</p>
-                <p className="card-text"> exec_time: {t.exec_time} </p>
-                <p className="card-text">origin: {t.origin}</p>
+                <p className="card-text">{JSON.stringify(t)}</p>
               </div>
             </div>
           ))}
