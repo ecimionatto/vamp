@@ -6,8 +6,8 @@ import Settings from "./Settings";
 const NavBar = () => {
   return (
     <div>
-      <ul className="nav">
-        <li className="nav-item">
+      <ul className="nav nav-pills">
+        <li className="nav-item active">
           <Link className="nav-link" to="/dashboard">
             Dashboard
           </Link>
